@@ -9,6 +9,21 @@
 <body>
    <div class="container">
         <h1>Rock Paper Scissors</h1>
+
+        <div class="top-controls">
+            <label class="mode-control" for="best-of-select">
+                Match Mode
+                <select id="best-of-select">
+                    <option value="3">Best of 3</option>
+                    <option value="5" selected>Best of 5</option>
+                    <option value="7">Best of 7</option>
+                </select>
+            </label>
+            <button id="mute-btn" class="secondary-btn" type="button" aria-pressed="false">Sound: On</button>
+        </div>
+
+        <p id="match-status" class="match-status">Best of 5 - First to 3 wins</p>
+
         <div class="choices">
             <button class="choices-btn" data-choice="rock">Rock</button>
             <button class="choices-btn" data-choice="paper">Paper</button>
@@ -18,6 +33,7 @@
         <div class="result-container">
             <p id="result-text">Make your choice!</p>
             <p id="choices-display"></p>
+            <p id="streak-text" class="streak-text">Win Streak: 0</p>
         </div>
 
         <div class="score">
@@ -26,8 +42,8 @@
             <p>Ties: <span id="tie-score">0</span></p>
         </div>
 
-        <button id="reset-btn">Reset Game</button>
-   </div> 
+        <button id="reset-btn" type="button">Reset Game</button>
+   </div>
 
    <script src="index.js"></script>
 </body>
